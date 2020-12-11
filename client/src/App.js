@@ -4,7 +4,7 @@ import Footer from './components/Home/Footer';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom"
 
 import './App.css';
-import Trick from './components/Trick/trickItem'
+import TrickCard from './components/Trick/trickItem'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
             <Nav />
           
             <Header/>
-            <Trick/>
+            <TrickCard/>
             <Footer/>
           
           </BrowserRouter>
