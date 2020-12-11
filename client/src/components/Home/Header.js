@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import {Link,NavLink} from "react-router-dom"
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Header extends Component {
     render() {

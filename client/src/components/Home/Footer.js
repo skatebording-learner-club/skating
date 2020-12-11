@@ -5,7 +5,9 @@ class Footer extends Component {
     render(){
         
         return (
+           <section> hiddar 
     <div>
+        
         <footer className="footer">
         <div className="container">
         <div className="row align-items-center">
@@ -40,13 +42,15 @@ class Footer extends Component {
             <a href="#something">Terms of Use</a>
             </li>
         </ul>
+        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off"></input>
+  <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
         </div>
     </div>
     </div>
     </footer>
 </div>
+</section>
         )
     }
 }
-
 export default Footer
