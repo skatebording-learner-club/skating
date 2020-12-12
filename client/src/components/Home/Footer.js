@@ -42,8 +42,8 @@ class Footer extends Component {
             <a href="#something">Terms of Use</a>
             </li>
         </ul>
-        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off"></input>
-  <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+        {/* <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off"></input>
+  <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label> */}
         </div>
     </div>
     </div>

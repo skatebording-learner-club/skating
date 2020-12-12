@@ -3,11 +3,11 @@ import { Card, Button } from 'react-bootstrap';
 
 
 
-const Trick = () => {
+const TrickCard = ({ title,}) => {
     return (
         <div>
             <Card style={{ width: '18rem' }} >
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" src={`https://unsplash.it/350/140/?${Math.floor(Math.random(0, 100) * 100)}`} />
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
                     <Card.Text>
@@ -16,9 +16,10 @@ const Trick = () => {
                     </Card.Text>
                     <Button variant="primary">Go somewhere</Button>
                 </Card.Body>
-            </Card >
+            </Card>
         </div>
+        
     )
 }
 
-export default Trick;
+export default TrickCard;

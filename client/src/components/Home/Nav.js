@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom"
- import './nav.css';
+import './nav.css';
 
 
 class Nav extends Component {
@@ -12,10 +12,10 @@ class Nav extends Component {
                 <div>logg</div>
                 <div className="navbar__center">
                     <ul>
-                        <i style={{margin:'35px'}}>HOME</i>
-                        <i style={{margin:'35px'}}>SKATEBORDERS</i>
-                        <i style={{margin:'35px'}}>LEARN</i>
-                        <i style={{margin:'35px'}}>MY ACCOUNT</i>
+                        <i style={{margin:'35px'}}><NavLink to="/">HOME</NavLink></i>
+                        <i style={{margin:'35px'}}><NavLink to="/sakters">SKATEBORDERS</NavLink></i>
+                        <i style={{margin:'35px'}}><NavLink to="/learn">LEARN</NavLink></i>
+                        <i style={{margin:'35px'}}><NavLink to="/myaccount">MY ACCOUNT</NavLink></i>
                     </ul>
                 </div>
                 <div>TWO ICONS</div>
