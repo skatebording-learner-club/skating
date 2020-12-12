@@ -11,8 +11,10 @@ function App() {
     <div className="App">
         <div>
           <BrowserRouter>
+          
 
             <Nav />
+          
             <Header/>
             <Trick/>
             <Footer/>
