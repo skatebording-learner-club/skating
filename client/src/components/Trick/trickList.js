@@ -20,13 +20,13 @@ class Trick extends Component {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(obj)
         };
-        fetch('/retrieveTrick', requestOptions)
+        fetch('/retrieveTricks', requestOptions)
           .then(response => response.json())
           .then(data => this.setState({ tricks: data }));
       }
       
-      handelOnClick = async (id, userId) => {
-        axios.post('/goTrick', { _id: id, userId: userId })
+      handelOnClick = async (id, trickId) => {
+        axios.post('/goTrick', { _id: id, trickId: trickId })
           .then((response) => {
             console.log(response);
           })
@@ -35,7 +35,7 @@ class Trick extends Component {
           render() {
             const {trickName} = this.state
             return (
-                <div className="eventPage page-section " >
+                <div className="page-section " >
                   <div className="container ">
                     <div className="row" >
                       <div className="col-lg-12 text-center">
