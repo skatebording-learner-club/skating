@@ -14,6 +14,7 @@ const Trick = require('./trickSchema').Trick;
 //    res.send('Error' , err)
 //   }
 // }
+
 exports.retrieveTricks = function (req, res) {
   Trick.find()
       .exec( (err,tricks) => {
