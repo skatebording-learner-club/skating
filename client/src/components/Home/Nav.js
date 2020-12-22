@@ -9,7 +9,7 @@ class Nav extends Component {
         return (
             <div className="image__navbar">
                <div className="navbar">
-                <div>logg</div>
+                <div>M</div>
                 <div className="navbar__center">
                     <ul>
                         <i style={{margin:'35px'}}><NavLink to="/">HOME</NavLink></i>

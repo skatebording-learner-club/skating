@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import {Link,NavLink} from "react-router-dom"
 // import 'bootstrap/dist/css/bootstrap.min.css';
+import TrickCard from '../Trick/trickItem'
 
 class Header extends Component {
     render() {
@@ -16,7 +17,7 @@ class Header extends Component {
                         </div>
                     </div>
                 </header>
-
+                <TrickCard />
             </div>
         )
     }
