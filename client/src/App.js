@@ -8,6 +8,8 @@ import TrickCard from './components/Trick/trickItem'
 import Login from './components/Login';
 import Signup from './components/Signup';
 import AddTrick from './components/Trick/AddTrick';
+import Trick from './components/Trick/trickList';
+
 
 function App() {
   return (
@@ -22,8 +24,10 @@ function App() {
             <Route exact path={"/myaccount"} render={() => (<Signup />)} />
             <Route exact path={"/sakters"} render={() => (<Login />)} />
             <Route exact path={"/AddTrick"} render={() => (<AddTrick />)} />
+            <Route exact path={"/learn"} render={() => (<Trick />)} />
+
           </Switch>
-          <Footer />
+          <Footer/>
         </BrowserRouter>
       </div>
     </div>
