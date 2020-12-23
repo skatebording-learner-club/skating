@@ -29,7 +29,6 @@ exports.addTrick =  async(req, res) => {
   const trick = new Trick({
     trickName: req.body.trickName,
     photo: req.body.photo,
-    video : req.body.video,
     description:req.body.description
   });
 

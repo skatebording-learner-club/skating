@@ -4,7 +4,7 @@ var user = mongoose.Schema({
   fullName: {
     type: String,
     required: true,
-    min: 6,
+    min: 5,
     max: 255
   },
   email: {
@@ -14,7 +14,7 @@ var user = mongoose.Schema({
   password: {
     type: String,
     required: true,
-    min: 6,
+    min: 5,
     max: 255
   }
 });

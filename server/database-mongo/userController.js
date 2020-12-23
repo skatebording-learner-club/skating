@@ -22,7 +22,7 @@ exports.signup = async (req, res) => {
   console.log(req.body);
     // this validate methode to check the requirement data
     const { error } = userSchema.validate(req.body)
-    if (error) return res.send(error.details[0].message)
+    if (error) return res.status(400).send(error.details[0].message)
     //findOne to check if email exit or not in database
     console.log("validationnnnnnnnnnnnnnnnnnn");
 

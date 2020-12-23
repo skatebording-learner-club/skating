@@ -9,10 +9,11 @@ class Nav extends Component {
         return (
             <div className="image__navbar">
                <div className="navbar">
-                <div>M</div>
+                <div>logg</div>
                 <div className="navbar__center">
                     <ul>
                         <i style={{margin:'35px'}}><NavLink to="/">HOME</NavLink></i>
+                        <i style={{margin:'35px'}}><NavLink to="/AddTrick">Add Trick</NavLink></i>
                         <i style={{margin:'35px'}}><NavLink to="/sakters">SKATEBORDERS</NavLink></i>
                         <i style={{margin:'35px'}}><NavLink to="/learn">LEARN</NavLink></i>
                         <i style={{margin:'35px'}}><NavLink to="/myaccount">MY ACCOUNT</NavLink></i>

@@ -2,21 +2,25 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom"
 import axios from "axios"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './signup.css';
+
 class Signup extends Component {
   state = {
     fullName: '',
     email: '',
-    password: ''
+    password: '',
   }
+
   handleChangeInput = (e) => {
     let { name, value } = e.target;
     this.setState({ [name]: value })
-    console.log(this.state)
+    console.log(value)
   }
   signup = (e) => {
     e.preventDefault();
     axios.post("/signupClient", this.state)
       .then((response) => {
+        console.log("ssssssssssssssssssssss")
         console.log(response)
         localStorage.setItem('login', response.data.token)
         localStorage.setItem('userId', response.data.userId)
@@ -25,7 +29,7 @@ class Signup extends Component {
     this.setState({
       fullName: '',
       email: '',
-      password: ''
+      password: '',
     })
 
   }
@@ -35,53 +39,50 @@ class Signup extends Component {
     return (
 
       <section className="page-section" id="contact">
-        <div class="container h-100">
-          <div class="d-flex justify-content-center h-100">
-            <div class="user_card">
-              <div class="d-flex justify-content-center">
-                <h3 id="form-title">REGISTER ACCOUNT</h3>
-              </div>
-              <div class="d-flex justify-content-center form_container">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 text-center">
+              <h2 className="section-heading text-uppercase"> sign up as a User </h2>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-sm-12">
+              <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                <div className="row">
+                  <div className="col-md-6">
 
-                <form method="POST" action="">
-                  <div class="input-group mb-3">
-                    <div class="input-group-append">
-                      <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <div className="form-group">
+                      <input className="form-control" value={this.state.fullName} onChange={this.handleChangeInput} name="fullName" id="fullName" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." />
+                      <p className="help-block text-danger"></p>
                     </div>
-                    <input className="form-control" name="fullName" value={this.state.fullName} onChange={this.handleChangeInput} id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." />
-                  </div>
-                  <div class="input-group mb-2">
-                    <div class="input-group-append">
-                      <span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
+
+                    <div className="form-group">
+                      <input className="form-control" value={this.state.email} onChange={this.handleChangeInput} name="email" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
+                      <p className="help-block text-danger"></p>
                     </div>
-                    <input className="form-control" name="email" value={this.state.email} onChange={this.handleChangeInput} id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
+
                   </div>
-                  <div class="input-group mb-2">
-                    <div class="input-group-append">
-                      <span class="input-group-text"><i class="fas fa-key"></i></span>
+
+                  <div className="col-md-6">
+
+                    <div className="form-group">
+                      <input className="form-control" value={this.state.password} onChange={this.handleChangeInput} name="password" id="password" type="password" placeholder="Your password *" required="required" data-validation-required-message="Please enter your password address." />
+                      <p className="help-block text-danger"></p>
                     </div>
-                    <input className="form-control" name="password" value={this.state.password} onChange={this.handleChangeInput} id="password" type="password" placeholder="Your password *" required="required" data-validation-required-message="Please enter your password address." />
                   </div>
-                  <div class="d-flex justify-content-center mt-3 login_container">
+
+                  <div className="clearfix"></div>
+                  <div className="col-lg-12 text-center">
+                    <div id="success"></div>
                     <button onClick={this.signup} id=" join us " className="btn btn-primary btn-xl text-uppercase" type="submit">join us</button>
                   </div>
-                </form>
-              </div>
-
-              <div class="mt-4">
-                <div class="d-flex justify-content-center links">
-                  Already have an account? <a href="/" class="ml-2">Login</a>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
-      </section >
+      </section>
     )
   }
 }
 export default Signup;
-
-{/* <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous"> */}

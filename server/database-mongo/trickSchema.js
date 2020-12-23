@@ -8,7 +8,6 @@ var trick = mongoose.Schema({
       max: 255
     },
     photo: String,
-    video: String,
     description: String,
   });
   // capital User

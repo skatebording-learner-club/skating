@@ -7,6 +7,7 @@ import Footer from './components/Home/Footer';
 import TrickCard from './components/Trick/trickItem'
 import Login from './components/Login';
 import Signup from './components/Signup';
+import AddTrick from './components/Trick/AddTrick';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route exact path={"/"} render={() => (<Header />)} />
             <Route exact path={"/myaccount"} render={() => (<Signup />)} />
             <Route exact path={"/sakters"} render={() => (<Login />)} />
+            <Route exact path={"/AddTrick"} render={() => (<AddTrick />)} />
           </Switch>
           <Footer />
         </BrowserRouter>
