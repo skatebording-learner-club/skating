@@ -20,10 +20,10 @@ class Nav extends Component {
                         <i style={{margin:'35px'}}><NavLink to="/myaccount">MY ACCOUNT</NavLink></i>
                     </ul>
                 </div>
-                <div>TWO ICONS</div>
+                
                </div>
                <div>
-                   YOU GREAT SKATE BORDER
+                   YOU ARE GREAT SKATE BORDER !
                </div>
             </div>
 

@@ -57,6 +57,11 @@ class TrickAddForm extends Component {
                       <input className="form-control" value={this.state.description} onChange={this.handleChangeInput} id="description" name="description" type="text" placeholder="Description *" required="required" data-validation-required-message="Please enter description of your trick." />
                       <p className="help-block text-danger"></p>
                     </div>
+                    <div className="form-group">
+                      <input className="form-control" value={this.state.photo} onChange={this.handleChangeInput} id="photo" name="photo" type="text" placeholder=" URL link here" required="required" data-validation-required-message="Please enter photo of your trick." />
+                      <p className="help-block text-danger"></p>
+                    </div>
+
 
 
                   </div>

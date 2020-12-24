@@ -48,7 +48,7 @@ class Trick extends Component {
           render() {
             var allTricks = this.state.tricks.map((trick)=>{
               console.log(trick);
-              return  <TrickCard trickName={trick.trickName} description={trick.description} />
+              return  <TrickCard trickName={trick.trickName} photo = {trick.photo} description={trick.description} />
             })
             console.log(allTricks,"done")
             return (

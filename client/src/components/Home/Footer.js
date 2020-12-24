@@ -8,7 +8,7 @@ class Footer extends Component {
             <section>
                 <div>
 
-                    <footer className="footer">
+                    <footer style={{backgroundColor: "lightgray"}} className="footer">
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-md-4">

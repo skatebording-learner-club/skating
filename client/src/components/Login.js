@@ -19,7 +19,7 @@ class Login extends Component {
     let { name, value } = e.target;
     this.setState({ [name]: value })
 
-    console.log(value)
+    console.log(this.state)
   }
 
   handelOnClick = async (e) => {
@@ -30,7 +30,8 @@ class Login extends Component {
       .then((response) => {
         console.log(response)
         localStorage.setItem('login', response.data.token)
-        window.location.reload()
+        // window.location.reload()
+        window.location.replace('/')
       })
   }
 
